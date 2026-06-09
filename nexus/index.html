@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexus — Gesture-Controlled Particle Physics Playground</title>
+    <meta name="description" content="An interactive particle physics simulation you control with your hands. Built with WebGL, MediaPipe, and Web Audio API. No backend required.">
+    <meta name="author" content="Amit">
+    <meta name="keywords" content="particles, physics, simulation, gesture, hand tracking, MediaPipe, WebGL, generative art">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nexus — Particle Physics Playground">
+    <meta property="og:description" content="Control 10,000+ particles with your bare hands using webcam gesture tracking.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Main Simulation Canvas -->
+    <canvas id="main-canvas"></canvas>
+
+    <!-- Hidden Webcam Video (used by GestureController) -->
+    <video id="webcam-video" autoplay playsinline muted></video>
+
+    <!-- Welcome Modal -->
+    <div class="welcome-modal" id="welcome-modal">
+        <div class="welcome-content">
+            <div class="welcome-logo">✦</div>
+            <h1 class="welcome-title">Nexus</h1>
+            <p class="welcome-subtitle">
+                A real-time particle physics playground.<br>
+                Control forces with your <strong>mouse</strong>, <strong>hands</strong>, or <strong>voice</strong>.
+            </p>
+            <div class="welcome-features">
+                <div class="welcome-feature">
+                    <span class="welcome-feature-icon">🖱️</span>
+                    <span class="welcome-feature-label">Mouse</span>
+                </div>
+                <div class="welcome-feature">
+                    <span class="welcome-feature-icon">✋</span>
+                    <span class="welcome-feature-label">Gestures</span>
+                </div>
+                <div class="welcome-feature">
+                    <span class="welcome-feature-icon">🎵</span>
+                    <span class="welcome-feature-label">Sound</span>
+                </div>
+                <div class="welcome-feature">
+                    <span class="welcome-feature-icon">📸</span>
+                    <span class="welcome-feature-label">Capture</span>
+                </div>
+            </div>
+            <button class="btn-start" id="btn-start">Enter Nexus</button>
+        </div>
+    </div>
+
+    <!-- App Script (ES Module) -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
